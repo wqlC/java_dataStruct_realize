@@ -150,9 +150,41 @@ public class LinkedList<E> {
         return false;
     }
 
+    /**
+     * 删除链表index（0-based）位置的元素
+     * @param index 要删除的节点的索引
+     * @return  返回删除的节点对应的元素
+     */
+    public E remove(int index){
+        if(index<0 || index>=size){
+            throw new IllegalArgumentException("Remove element failed. Illegal index");
+        }
+        Node cur = dummyHead;
+        for(int i=0; i<index; i++){
+            cur = cur.next;
+        }
+        Node rmNode = cur.next;
+        cur.next = cur.next.next;
+        rmNode.next = null;
+        size--;
+        return rmNode.e;
+    }
+
+    /**
+     * 删除链表的 第一个节点
+     * @return 返回删除的节点对应的元素
+     */
+    public E removeFirst(){
+        return remove(0);
+    }
+
+    public E removeLast(){
+        return remove(size-1);
+    }
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append(String.format("LinkedList[size:%d]\n", size));
         Node cur = dummyHead.next;
         while(cur != null){
             sb.append(cur + "->");
