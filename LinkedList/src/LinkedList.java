@@ -184,7 +184,7 @@ public class LinkedList<E> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("LinkedList[size:%d]\n", size));
+//        sb.append(String.format("LinkedList[size:%d]\n", size));
         Node cur = dummyHead.next;
         while(cur != null){
             sb.append(cur + "->");
