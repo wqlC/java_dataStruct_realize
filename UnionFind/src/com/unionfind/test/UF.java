@@ -1,3 +1,5 @@
+package com.unionfind.test;
+
 /**
  * @author tailor
  * @create 2020/4/2 - 11:48
@@ -5,6 +7,6 @@
  */
 public interface UF {
     int getSize();
-    boolean idConnected(int p, int q);
+    boolean isConnected(int p, int q);
     void UnionElements(int p, int q);
 }
