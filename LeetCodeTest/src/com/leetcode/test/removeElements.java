@@ -16,7 +16,7 @@ import java.util.ListIterator;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class RemoveElements {
     public ListNode removeElements(ListNode head, int val) {
         ListNode dummyHead = new ListNode(-1);
         dummyHead.next = head;
