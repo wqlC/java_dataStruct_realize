@@ -45,8 +45,6 @@ public class LevelOrder {
         List<List<Integer>> ret = new ArrayList<>();
 
         Queue<TreeNode> mainQueue = new LinkedList<>();
-
-
         if(root == null){
             return ret;
         }
